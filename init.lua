@@ -5,10 +5,14 @@ local bags_enabled = minetest.get_modpath("unified_inventory")
     and minetest.settings:get_bool("unified_inventory_bags") ~= false
     or minetest.get_modpath("sfinv_bags") and true
 
-local void_chest_item = minetest.get_modpath("void_chest") and "void_chest:void_chest"
+local void_chest_item = minetest.get_modpath("void_chest")
+    and minetest.settings:get_bool("inventory_overflow_void_chest")
+    and "void_chest:void_chest"
 local void_chest_inv  = void_chest_item and "void_chest:void_chest"
 
-local enderchest_item = minetest.get_modpath("xdecor") and "xdecor:enderchest"
+local enderchest_item = minetest.get_modpath("xdecor")
+    and minetest.settings:get_bool("inventory_overflow_enderchest")
+    and "xdecor:enderchest"
 local enderchest_inv  = enderchest_item and "enderchest"
 
 local function get_bags(player)
