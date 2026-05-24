@@ -1,0 +1,2 @@
+inventory_overflow_enderchest (Overflow into enderchest) bool false
+inventory_overflow_void_chest (Overflow into void chest) bool false
